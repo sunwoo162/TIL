@@ -11,7 +11,7 @@ git add .			// 폴더 내에 있는 파일 전체 add
 ## 3. commit하기
 ```
 git commit -m "Commit message"  // 명령어
-``
+```
 ## 3. 커밋 내역 확인
 ```
 git log
