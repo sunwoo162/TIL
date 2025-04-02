@@ -142,6 +142,7 @@
      : 504 : Gateway timeout (게이트웨이 시간 초과)
      : 505 : HTTP wersion not supported (해당 http 버전 지원되지 않음)
      : 507 : Insufficient Storage (용량 부족)
+```
 ## 4. 프론트엔드, 백엔드의 차이와 하는 일
 1. 프론트엔드란?
 @ 하는일
