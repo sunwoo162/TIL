@@ -1,89 +1,89 @@
-# GIt°ú GIthub
-## 1. branch¶õ ¹«¾ùÀÎ°¡
+# GItê³¼ GIthub
+## 1. branchëž€ ë¬´ì—‡ì¸ê°€
 ```
-ºê·£Ä¡¶õ?(°¡Áö)
-ÇÏ³ªÀÇ ÁÙ±â¿¡¼­ »¸¾î³ª¿Â °úÁ¤µéÀ» ÀÇ¸¶ÇÏ¸ç, ÀúÀå°ø°£¿¡¼­ ¶Ç ´Ù¸¥ °¡»óÀÇ ÀúÀå°ø°£À» »ý¼ºÇÏ´Â °Í
-ÇÏ³ªÀÇ ÇÁ·ÎÁ§Æ®¸¦ ¿©·¯ °¥·¡·Î ³ª´² °ü¸®ÇÒ ¼ö ÀÖ°Ô ÇØÁÖ´Â ±â´ÉÀÌ´Ù.
-¸ÞÀÎ ÄÚµå¿Í ºÐ¸®ÇÏ¿© ÀÛ¾÷ÇÒ ¶§ À¯¿ëÇÏ°Ô ¾²ÀÎ´Ù.
+ë¸Œëžœì¹˜ëž€?(ê°€ì§€)
+í•˜ë‚˜ì˜ ì¤„ê¸°ì—ì„œ ë»—ì–´ë‚˜ì˜¨ ê³¼ì •ë“¤ì„ ì˜ë§ˆí•˜ë©°, ì €ìž¥ê³µê°„ì—ì„œ ë˜ ë‹¤ë¥¸ ê°€ìƒì˜ ì €ìž¥ê³µê°„ì„ ìƒì„±í•˜ëŠ” ê²ƒ
+í•˜ë‚˜ì˜ í”„ë¡œì íŠ¸ë¥¼ ì—¬ëŸ¬ ê°ˆëž˜ë¡œ ë‚˜ëˆ  ê´€ë¦¬í•  ìˆ˜ ìžˆê²Œ í•´ì£¼ëŠ” ê¸°ëŠ¥ì´ë‹¤.
+ë©”ì¸ ì½”ë“œì™€ ë¶„ë¦¬í•˜ì—¬ ìž‘ì—…í•  ë•Œ ìœ ìš©í•˜ê²Œ ì“°ì¸ë‹¤.
 ```
-## 2. branch »ç¿ëÇÏ±â
+## 2. branch ì‚¬ìš©í•˜ê¸°
 
--1 ºê·£Ä¡ ¸®½ºÆ® È®ÀÎÇÏ±â
+-1 ë¸Œëžœì¹˜ ë¦¬ìŠ¤íŠ¸ í™•ì¸í•˜ê¸°
 ```
 git branch
 ```
--2 ºê·£Ä¡ ¸¸µé±â
+-2 ë¸Œëžœì¹˜ ë§Œë“¤ê¸°
 ```
-git branch ºê·£Ä¡ ÀÌ¸§
+git branch ë¸Œëžœì¹˜ ì´ë¦„
 ```
--3 ºê·£Ä¡ »èÁ¦ÇÏ±â
+-3 ë¸Œëžœì¹˜ ì‚­ì œí•˜ê¸°
 ```
-git branch -d ºê·£Ä¡ÀÌ¸§
+git branch -d ë¸Œëžœì¹˜ì´ë¦„
 ```
--4 ºê·£Ä¡ ¹Ù²Ù±â
+-4 ë¸Œëžœì¹˜ ë°”ê¾¸ê¸°
 ```
-git checkout [-b] ºê·£Ä¡ÀÌ¸§
+git checkout [-b] ë¸Œëžœì¹˜ì´ë¦„
 ```
--5 µÎ ºê·£Ä¡ÀÇ Ä¿¹Ô »óÅÂ Â÷ÀÌ º¸±â
+-5 ë‘ ë¸Œëžœì¹˜ì˜ ì»¤ë°‹ ìƒíƒœ ì°¨ì´ ë³´ê¸°
 ```
-git log [-p] ºê·£Ä¡1..ºê·£Ä¡2
+git log [-p] ë¸Œëžœì¹˜1..ë¸Œëžœì¹˜2
 ```
--6 ºê·£Ä¡µéÀÇ Ä¿¹Ô »óÅÂ º¸±â
+-6 ë¸Œëžœì¹˜ë“¤ì˜ ì»¤ë°‹ ìƒíƒœ ë³´ê¸°
 ```
 git log --barnches --decorate --graph --oneline
-* --barnches : °¢ ºê·£Ä¡°¡ ¾î¶² Ä¿¹ÔÀ» °¡¸£Å°°í ÀÖ´ÂÁö ¾Ë·ÁÁØ´Ù.
-* --decorate : ºê·£Ä¡ÀÇ ÂüÁ¶ Á¤º¸¸¦ ¾Ë·ÁÁØ´Ù.
-* --graph : Ä¿¹Ô ÀÌ·ÂÀ» ÅØ½ºÆ® ±â¹Ý ±×·¡ÇÈÀ¸·Î Ç¥ÇöÇÑ´Ù.
-* --oneline : ±×·¡ÇÁÀÇ »óÈ²À» °£°áÇÏ°Ô º¸¿©ÁØ´Ù.
+* --barnches : ê° ë¸Œëžœì¹˜ê°€ ì–´ë–¤ ì»¤ë°‹ì„ ê°€ë¥´í‚¤ê³  ìžˆëŠ”ì§€ ì•Œë ¤ì¤€ë‹¤.
+* --decorate : ë¸Œëžœì¹˜ì˜ ì°¸ì¡° ì •ë³´ë¥¼ ì•Œë ¤ì¤€ë‹¤.
+* --graph : ì»¤ë°‹ ì´ë ¥ì„ í…ìŠ¤íŠ¸ ê¸°ë°˜ ê·¸ëž˜í”½ìœ¼ë¡œ í‘œí˜„í•œë‹¤.
+* --oneline : ê·¸ëž˜í”„ì˜ ìƒí™©ì„ ê°„ê²°í•˜ê²Œ ë³´ì—¬ì¤€ë‹¤.
 ```
--7 °¢ ºê·£Ä¡ÀÇ ÇöÀç »óÅÂ ºñ±³
+-7 ê° ë¸Œëžœì¹˜ì˜ í˜„ìž¬ ìƒíƒœ ë¹„êµ
 ```
 git diff
 ```
--8 ºê·£Ä¡ º´ÇÕ
+-8 ë¸Œëžœì¹˜ ë³‘í•©
 ```
-git merge ºê·£Ä¡1
+git merge ë¸Œëžœì¹˜1
 1. Gast-forward
 2. 3-way Merge
 ```
-## 3. github ¸í·É¾îµé
--1 ÇöÀç »óÅÂ È®ÀÎ
+## 3. github ëª…ë ¹ì–´ë“¤
+-1 í˜„ìž¬ ìƒíƒœ í™•ì¸
 ```
 git status
 ```
--2 ÀüÃ¼ ·Î±× È®ÀÎ
+-2 ì „ì²´ ë¡œê·¸ í™•ì¸
 ```
 git log
 ```
--3 git ÀúÀå¼Ò »ý¼ºÇÏ±â
+-3 git ì €ìž¥ì†Œ ìƒì„±í•˜ê¸°
 ```
 git init
 ```
--4 ÀúÀå¼Ò º¹Á¦ ¹× ´Ù¿î·Îµå
+-4 ì €ìž¥ì†Œ ë³µì œ ë° ë‹¤ìš´ë¡œë“œ
 ```
 git clone [https:~~~]
 ```
--5 ÀúÀå¼Ò¿¡ ÄÚµå Ãß°¡
+-5 ì €ìž¥ì†Œì— ì½”ë“œ ì¶”ê°€
 ```
 git add
 git add*
 ```
--6 Ä¿¹Ô¿¡ ÆÄÀÏÀÇ º¯°æ »çÇ×À» ÇÑ¹ø¿¡ ¸ðµÎ Æ÷ÇÔ
+-6 ì»¤ë°‹ì— íŒŒì¼ì˜ ë³€ê²½ ì‚¬í•­ì„ í•œë²ˆì— ëª¨ë‘ í¬í•¨
 ```
 git add -A
 ```
--7 Ä¿¹Ô »ý¼º
+-7 ì»¤ë°‹ ìƒì„±
 ```
 git commit -m"message"
 ```
--8 º¯°æ »çÇ× ¿ø°Ý ¼­¹ö ¾÷·Îµå(push)
+-8 ë³€ê²½ ì‚¬í•­ ì›ê²© ì„œë²„ ì—…ë¡œë“œ(push)
 ```
 git push origin master
 ```
--9 ¿ø°Ý ÀúÀå¼ÒÀÇ º¯°æ ³»¿ëÀ» ÇöÀç µð·ºÅä¸®·Î °¡Á®¿À±â(pull)
+-9 ì›ê²© ì €ìž¥ì†Œì˜ ë³€ê²½ ë‚´ìš©ì„ í˜„ìž¬ ë””ë ‰í† ë¦¬ë¡œ ê°€ì ¸ì˜¤ê¸°(pull)
 ```
 git pull
 ```
--10 º¯°æ ³»¿ëÀ» merge ÇÏ±â Àü¿¡ ¹Ù²ï ³»¿ë ºñ±³
+-10 ë³€ê²½ ë‚´ìš©ì„ merge í•˜ê¸° ì „ì— ë°”ë€ ë‚´ìš© ë¹„êµ
 ```
-git diff [ºê·£Ä¡ ÀÌ¸§][´Ù¸¥ ºê·£Ä¡ ÀÌ¸§]
+git diff [ë¸Œëžœì¹˜ ì´ë¦„][ë‹¤ë¥¸ ë¸Œëžœì¹˜ ì´ë¦„]
