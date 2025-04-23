@@ -47,4 +47,3 @@ I/O Communication : 입출력 통신 관리
 가벼운 성질 때문에 임베디드 시스템등에 사용된다
 대표적으로 MacOS, Winodws NT등이 있다
 ```
-```
