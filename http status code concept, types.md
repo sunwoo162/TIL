@@ -1,115 +1,115 @@
-# http »óÅÂÄÚµå °³³ä, Á¾·ù
-## http »óÅÂÄÚµå¶õ?
+# http ìƒíƒœì½”ë“œ ê°œë…, ì¢…ë¥˜
+## http ìƒíƒœì½”ë“œëž€?
 ```
-Æ¯Á¤ HTTP¿äÃ»ÀÌ ¼º°øÀûÀ¸·Î ¿Ï·áµÇ¾ú´ÂÁö ¾Ë·ÁÁÖ´Â ÄÚµåÀÌ´Ù.
+íŠ¹ì • HTTPìš”ì²­ì´ ì„±ê³µì ìœ¼ë¡œ ì™„ë£Œë˜ì—ˆëŠ”ì§€ ì•Œë ¤ì£¼ëŠ” ì½”ë“œì´ë‹¤.
 ```
-## ÀÚÁÖ »ç¿ëµÇ´Â ÄÚµå
-#### 1XX : Informational(Á¤º¸Á¦°ø) 
+## ìžì£¼ ì‚¬ìš©ë˜ëŠ” ì½”ë“œ
+#### 1XX : Informational(ì •ë³´ì œê³µ) 
 ```
-ÃÖ±Ù¿¡´Â Àß »ç¿ëµÇÁö ¾Ê´Â´Ù
+ìµœê·¼ì—ëŠ” ìž˜ ì‚¬ìš©ë˜ì§€ ì•ŠëŠ”ë‹¤
 ```
-#### 2XX : Success(¼º°ø) 
+#### 2XX : Success(ì„±ê³µ) 
 ```
-: 200 : OK(¿äÃ»ÀÌ ¼º°øÀûÀ¸·Î ¼öÇàµÇ¾úÀ½),(¼º°ø)
-: 201 : Created (PUT ¸Þ¼Òµå¿¡ ÀÇÇØ ¿ø°ÝÁö ¼­¹ö¿¡ ÆÄÀÏ »ý¼ºµÊ),(»ý¼ºµÊ)
-: 202 : Accepted(À¥ ¼­¹ö°¡ ¸í·É ¼ö½ÅÇÔ),(Çã¿ëµÊ)
-: 204 : No content,(PUT,POST,DELETE ¿äÃ»ÀÇ °æ¿ì ¼º°øÀº ÇßÁö¸¸ Àü¼ÛÇÒ µ¥ÀÌÅÍ°¡ ¾ø´Â °æ¿ì),(ÄÜÅÙÃ÷ ¾øÀ½)
+: 200 : OK(ìš”ì²­ì´ ì„±ê³µì ìœ¼ë¡œ ìˆ˜í–‰ë˜ì—ˆìŒ),(ì„±ê³µ)
+: 201 : Created (PUT ë©”ì†Œë“œì— ì˜í•´ ì›ê²©ì§€ ì„œë²„ì— íŒŒì¼ ìƒì„±ë¨),(ìƒì„±ë¨)
+: 202 : Accepted(ì›¹ ì„œë²„ê°€ ëª…ë ¹ ìˆ˜ì‹ í•¨),(í—ˆìš©ë¨)
+: 204 : No content,(PUT,POST,DELETE ìš”ì²­ì˜ ê²½ìš° ì„±ê³µì€ í–ˆì§€ë§Œ ì „ì†¡í•  ë°ì´í„°ê°€ ì—†ëŠ” ê²½ìš°),(ì½˜í…ì¸  ì—†ìŒ)
 ```
-#### 3XX : Redirection(¸®´ÙÀÌ·º¼Ç)(¿äÃ»À» ¿Ï·áÇÏ·Á¸é Ãß°¡Çàµ¿ ÇÊ¿ä)
+#### 3XX : Redirection(ë¦¬ë‹¤ì´ë ‰ì…˜)(ìš”ì²­ì„ ì™„ë£Œí•˜ë ¤ë©´ ì¶”ê°€í–‰ë™ í•„ìš”)
 ```
-: 301 : Moved permanently (¿ä±¸ÇÑ µ¥ÀÌÅÍ¸¦ º¯°æµÈ Å¸ URL¿¡ ¿äÃ»ÇÔ/RedirectµÈ °æ¿ì),(¿µ±¸ ÀÌµ¿)
-: 302 : Found (¸®´ÙÀÌ·ºÆ® ¿äÃ» ¸Þ¼Òµå°¡ GETÀ¸·Î º¯ÇÏ°í º»¹®ÀÌ Á¦°ÅµÉ ¼ö ÀÖÀ½)
-: 307 : Temporary Redirect (Å¬¶óÀÌ¾ðÆ®°¡ ¿äÃ»ÇÑ ¸®¼Ò½º°¡ ´Ù¸¥ URI¿¡ ÀÖÀ¸¸ç ÀÌÀü ¿äÃ»°ú µ¿ÀÏÇÑ ¸Þ¼Òµå¸¦ »ç¿ëÇØ¼­ ¿äÃ»ÇØ¾ß ÇÒ ¶§ ¼­¹ö°¡ Å¬¶óÀÌ¾ðÆ®¿¡ ŸCÃ»À» Á÷Á¢ º¸³¿)
-: 308 : Permanent Redirect (¿ä±¸ÇÑ µ¥ÀÌÅÍ¸¦ º¯°æµÈ Å¸ URL¿¡ ¿äÃ»ÇÏ°í ¿äÃ» ¹æ½ÄÀ» ±×´ë·Î À¯ÁöÇÔ)
+: 301 : Moved permanently (ìš”êµ¬í•œ ë°ì´í„°ë¥¼ ë³€ê²½ëœ íƒ€ URLì— ìš”ì²­í•¨/Redirectëœ ê²½ìš°),(ì˜êµ¬ ì´ë™)
+: 302 : Found (ë¦¬ë‹¤ì´ë ‰íŠ¸ ìš”ì²­ ë©”ì†Œë“œê°€ GETìœ¼ë¡œ ë³€í•˜ê³  ë³¸ë¬¸ì´ ì œê±°ë  ìˆ˜ ìžˆìŒ)
+: 307 : Temporary Redirect (í´ë¼ì´ì–¸íŠ¸ê°€ ìš”ì²­í•œ ë¦¬ì†ŒìŠ¤ê°€ ë‹¤ë¥¸ URIì— ìžˆìœ¼ë©° ì´ì „ ìš”ì²­ê³¼ ë™ì¼í•œ ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•´ì„œ ìš”ì²­í•´ì•¼ í•  ë•Œ ì„œë²„ê°€ í´ë¼ì´ì–¸íŠ¸ì— ÂŸCì²­ì„ ì§ì ‘ ë³´ëƒ„)
+: 308 : Permanent Redirect (ìš”êµ¬í•œ ë°ì´í„°ë¥¼ ë³€ê²½ëœ íƒ€ URLì— ìš”ì²­í•˜ê³  ìš”ì²­ ë°©ì‹ì„ ê·¸ëŒ€ë¡œ ìœ ì§€í•¨)
 ```
-#### 4XX : Client Error(Å¬¶óÀÌ¾ðÆ® ¿¡·¯) 
+#### 4XX : Client Error(í´ë¼ì´ì–¸íŠ¸ ì—ëŸ¬) 
 ```
-: 400 : Bad Request (»ç¿ëÀÚÀÇ Àß¸øµÈ ¿äÃ»À» Ã³¸®ÇÒ ¼ö ¾øÀ½),(Àß¸øµÈ ¿äÃ»)
-: 401 : Unauthorized (ÀÎÁõÀÌ ÇÊ¿äÇÑ ÆäÀÌÁö¸¦ ¿äÃ»ÇÑ °æ¿ì),(±ÇÇÑ ¾øÀ½)
-: 403 : Forbidden (Á¢±Ù ±ÝÁö, µðÅØÅÍ¸® ¸®½ºÆÃ ¿äÃ» ¹× °ü¸®ÀÚ ÆäÀÌÁö Á¢±Ù µîÀ» Â÷´Ü),(±ÝÁöµÊ)
-: 404 : Not found, (¿äÃ»ÇÑ ÆäÀÌÁö ¾øÀ½),(Ã£À» ¼ö ¾øÀ½)
+: 400 : Bad Request (ì‚¬ìš©ìžì˜ ìž˜ëª»ëœ ìš”ì²­ì„ ì²˜ë¦¬í•  ìˆ˜ ì—†ìŒ),(ìž˜ëª»ëœ ìš”ì²­)
+: 401 : Unauthorized (ì¸ì¦ì´ í•„ìš”í•œ íŽ˜ì´ì§€ë¥¼ ìš”ì²­í•œ ê²½ìš°),(ê¶Œí•œ ì—†ìŒ)
+: 403 : Forbidden (ì ‘ê·¼ ê¸ˆì§€, ë””í…í„°ë¦¬ ë¦¬ìŠ¤íŒ… ìš”ì²­ ë° ê´€ë¦¬ìž íŽ˜ì´ì§€ ì ‘ê·¼ ë“±ì„ ì°¨ë‹¨),(ê¸ˆì§€ë¨)
+: 404 : Not found, (ìš”ì²­í•œ íŽ˜ì´ì§€ ì—†ìŒ),(ì°¾ì„ ìˆ˜ ì—†ìŒ)
 ```
-#### 5XX : Server Error(¼­¹ö ¿¡·¯)
+#### 5XX : Server Error(ì„œë²„ ì—ëŸ¬)
 ```
-: 500 : internal server error (³»ºÎ ¼­¹ö ¿À·ù)
-: 503 : Service unnailable (¼­ºñ½º Á¦°ø ºÒ°¡)(¿äÃ» Ã³¸® ÁØºñX)
+: 500 : internal server error (ë‚´ë¶€ ì„œë²„ ì˜¤ë¥˜)
+: 503 : Service unnailable (ì„œë¹„ìŠ¤ ì œê³µ ë¶ˆê°€)(ìš”ì²­ ì²˜ë¦¬ ì¤€ë¹„X)
 ```
-## ÀüÃ¼ ÄÚµå
-#### 1XX : Informational(Á¤º¸Á¦°ø)(Å¬¶óÀÌ¾ðÆ®ÀÇ ¿äÃ»À» ¹Þ¾ÒÀ¸¸ç, ÀÛ¾÷À» °è¼Ó ÁøÇàÇÏ°í ÀÖ´Ù.)
+## ì „ì²´ ì½”ë“œ
+#### 1XX : Informational(ì •ë³´ì œê³µ)(í´ë¼ì´ì–¸íŠ¸ì˜ ìš”ì²­ì„ ë°›ì•˜ìœ¼ë©°, ìž‘ì—…ì„ ê³„ì† ì§„í–‰í•˜ê³  ìžˆë‹¤.)
 ```
-Á¤º¸Àü¼Û : 100 : Continue (Å¬¶óÀÌ¾ðÆ®·Î ºÎÅÍ ÀÏºÎ ¿äÃ»À» ¹Þ¾ÒÀ¸¸é ³ª¸ÓÁö Á¤º¸¸¦ °è¼Ó ¿äÃ»ÇÔ),(°è¼Ó)
-ÀÓ½ÃÀÀ´ä : 101 : Switching protocols(ÇÁ·ÎÅäÄÝ ÀüÈ¯)
-         : 102 : Processing (Ã³¸®Áß)
+ì •ë³´ì „ì†¡ : 100 : Continue (í´ë¼ì´ì–¸íŠ¸ë¡œ ë¶€í„° ì¼ë¶€ ìš”ì²­ì„ ë°›ì•˜ìœ¼ë©´ ë‚˜ë¨¸ì§€ ì •ë³´ë¥¼ ê³„ì† ìš”ì²­í•¨),(ê³„ì†)
+ìž„ì‹œì‘ë‹µ : 101 : Switching protocols(í”„ë¡œí† ì½œ ì „í™˜)
+         : 102 : Processing (ì²˜ë¦¬ì¤‘)
 ```
-#### 2XX : Success(¼º°ø)(Å¬¶óÀÌ¾ðÆ®°¡ ¿äÃ»ÇÑ µ¿ÀÛÀ» ¼º°øÀûÀ¸·Î Ã³¸®ÇÏ¿´´Ù)
+#### 2XX : Success(ì„±ê³µ)(í´ë¼ì´ì–¸íŠ¸ê°€ ìš”ì²­í•œ ë™ìž‘ì„ ì„±ê³µì ìœ¼ë¡œ ì²˜ë¦¬í•˜ì˜€ë‹¤)
 ```
-¼º°ø : 200 : OK(¿äÃ»ÀÌ ¼º°øÀûÀ¸·Î ¼öÇàµÇ¾úÀ½),(¼º°ø)
-     : 201 : Created (PUT ¸Þ¼Òµå¿¡ ÀÇÇØ ¿ø°ÝÁö ¼­¹ö¿¡ ÆÄÀÏ »ý¼ºµÊ),(»ý¼ºµÊ)
-     : 202 : Accepted(À¥ ¼­¹ö°¡ ¸í·É ¼ö½ÅÇÔ),(Çã¿ëµÊ)
-     : 203 : Non-authoritative information (¼­¹ö°¡ Å¬¶óÀÌ¾ðÆ® ¿ä±¸ Áß ÀÏºÎ¸¸ Àü¼Û),(½Å·ÚÇÒ ¼ö ¾ø´Â Á¤º¸)
-     : 204 : No content,(PUT,POST,DELETE ¿äÃ»ÀÇ °æ¿ì ¼º°øÀº ÇßÁö¸¸ Àü¼ÛÇÒ µ¥ÀÌÅÍ°¡ ¾ø´Â °æ¿ì),(ÄÜÅÙÃ÷ ¾øÀ½)
-     : 205 : Reset Content (ÄÜÅÙÃ÷ Àç¼³Á¤)
-     : 206 : Partial Content (ÀÏºÎ ÄÜÅÙÃ÷)
-     : 207 : Multi-Status (´ÙÁß »óÅÂ)
-     : 208 : Already Reported (ÀÌ¹Ì º¸°íµÊ)
-     : 226 : IM Used (ÀÎ½ºÅÏ½º Á¶ÀÛ »ç¿ëµÊ)(¼º°ø ¼öÇà)
+ì„±ê³µ : 200 : OK(ìš”ì²­ì´ ì„±ê³µì ìœ¼ë¡œ ìˆ˜í–‰ë˜ì—ˆìŒ),(ì„±ê³µ)
+     : 201 : Created (PUT ë©”ì†Œë“œì— ì˜í•´ ì›ê²©ì§€ ì„œë²„ì— íŒŒì¼ ìƒì„±ë¨),(ìƒì„±ë¨)
+     : 202 : Accepted(ì›¹ ì„œë²„ê°€ ëª…ë ¹ ìˆ˜ì‹ í•¨),(í—ˆìš©ë¨)
+     : 203 : Non-authoritative information (ì„œë²„ê°€ í´ë¼ì´ì–¸íŠ¸ ìš”êµ¬ ì¤‘ ì¼ë¶€ë§Œ ì „ì†¡),(ì‹ ë¢°í•  ìˆ˜ ì—†ëŠ” ì •ë³´)
+     : 204 : No content,(PUT,POST,DELETE ìš”ì²­ì˜ ê²½ìš° ì„±ê³µì€ í–ˆì§€ë§Œ ì „ì†¡í•  ë°ì´í„°ê°€ ì—†ëŠ” ê²½ìš°),(ì½˜í…ì¸  ì—†ìŒ)
+     : 205 : Reset Content (ì½˜í…ì¸  ìž¬ì„¤ì •)
+     : 206 : Partial Content (ì¼ë¶€ ì½˜í…ì¸ )
+     : 207 : Multi-Status (ë‹¤ì¤‘ ìƒíƒœ)
+     : 208 : Already Reported (ì´ë¯¸ ë³´ê³ ë¨)
+     : 226 : IM Used (ì¸ìŠ¤í„´ìŠ¤ ì¡°ìž‘ ì‚¬ìš©ë¨)(ì„±ê³µ ìˆ˜í–‰)
 ```
-#### 3XX : Redirection(¸®´ÙÀÌ·º¼Ç)(¿äÃ»À» ¿Ï·áÇÏ·Á¸é Ãß°¡Çàµ¿ ÇÊ¿ä)
+#### 3XX : Redirection(ë¦¬ë‹¤ì´ë ‰ì…˜)(ìš”ì²­ì„ ì™„ë£Œí•˜ë ¤ë©´ ì¶”ê°€í–‰ë™ í•„ìš”)
 ```
-* ¿µ±¸ ¸®´ÙÀÌ·º¼Ç : 301,308
-* ÀÏ½ÃÀûÀÎ ¸®´ÙÀÌ·º¼Ç : 302, 303, 307
-* ±âÅ¸ ¸®´ÙÀÌ·º¼Ç : 300, 304
-     : 300 : Multiple Choices (¿©·¯ ¼±ÅÃ Ç×¸ñ)
-     : 301 : Moved permanently (¿ä±¸ÇÑ µ¥ÀÌÅÍ¸¦ º¯°æµÈ Å¸ URL¿¡ ¿äÃ»ÇÔ/RedirectµÈ °æ¿ì),(¿µ±¸ ÀÌµ¿)
-     : 302 : Not temporarliy (¿ä±¸ÇÑ µ¥ÀÌÅÍ¸¦ º¯°æµÈ Å¸ URL¿¡ ¿äÃ»ÇÔ/RedirectµÈ °æ¿ì),(´Ù¸¥ À§Ä¡ Ã£À½)
-     : 303 : See Other (´Ù¸¥ À§Ä¡ º¸±â)
-     : 304 : No content, (PUT,POST,DELETE ¿äÃ»ÀÇ °æ¿ì ¼º°øÀº ÇßÁö¸¸ Àü¼ÛÇÒ µ¥ÀÌÅÍ°¡ ¾ø´Â °æ¿ì),(¼öÁ¤µÇÁö ¾ÊÀ½)
-     : 305 : Use Proxy (ÇÁ·Ï½Ã »ç¿ë)
-     : 306 : Unused (¿¹Àü ¹öÀü¿¡¼­ »ç¿ëÇÏ´Ù°¡ ÇöÀç´Â »ç¿ëÇÏÁö ¾Ê´Â »óÅÂ ÄÚµå)
-     : 307 : Temporary Redirect (ÀÓ½Ã ¸®´ÙÀÌ·º¼Ç)
-     : 308 : Permanent Redirect (¿ä±¸ÇÑ µ¥ÀÌÅÍ¸¦ º¯°æµÈ Å¸ URL¿¡ ¿äÃ»ÇÏ°í ¿äÃ» ¹æ½ÄÀ» ±×´ë·Î À¯ÁöÇÔ)
+* ì˜êµ¬ ë¦¬ë‹¤ì´ë ‰ì…˜ : 301,308
+* ì¼ì‹œì ì¸ ë¦¬ë‹¤ì´ë ‰ì…˜ : 302, 303, 307
+* ê¸°íƒ€ ë¦¬ë‹¤ì´ë ‰ì…˜ : 300, 304
+     : 300 : Multiple Choices (ì—¬ëŸ¬ ì„ íƒ í•­ëª©)
+     : 301 : Moved permanently (ìš”êµ¬í•œ ë°ì´í„°ë¥¼ ë³€ê²½ëœ íƒ€ URLì— ìš”ì²­í•¨/Redirectëœ ê²½ìš°),(ì˜êµ¬ ì´ë™)
+     : 302 : Not temporarliy (ìš”êµ¬í•œ ë°ì´í„°ë¥¼ ë³€ê²½ëœ íƒ€ URLì— ìš”ì²­í•¨/Redirectëœ ê²½ìš°),(ë‹¤ë¥¸ ìœ„ì¹˜ ì°¾ìŒ)
+     : 303 : See Other (ë‹¤ë¥¸ ìœ„ì¹˜ ë³´ê¸°)
+     : 304 : No content, (PUT,POST,DELETE ìš”ì²­ì˜ ê²½ìš° ì„±ê³µì€ í–ˆì§€ë§Œ ì „ì†¡í•  ë°ì´í„°ê°€ ì—†ëŠ” ê²½ìš°),(ìˆ˜ì •ë˜ì§€ ì•ŠìŒ)
+     : 305 : Use Proxy (í”„ë¡ì‹œ ì‚¬ìš©)
+     : 306 : Unused (ì˜ˆì „ ë²„ì „ì—ì„œ ì‚¬ìš©í•˜ë‹¤ê°€ í˜„ìž¬ëŠ” ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ìƒíƒœ ì½”ë“œ)
+     : 307 : Temporary Redirect (ìž„ì‹œ ë¦¬ë‹¤ì´ë ‰ì…˜)
+     : 308 : Permanent Redirect (ìš”êµ¬í•œ ë°ì´í„°ë¥¼ ë³€ê²½ëœ íƒ€ URLì— ìš”ì²­í•˜ê³  ìš”ì²­ ë°©ì‹ì„ ê·¸ëŒ€ë¡œ ìœ ì§€í•¨)
    ```
-#### 4XX : Client Error(Å¬¶óÀÌ¾ðÆ® ¿¡·¯)(Å¬¶óÀÌ¾ðÆ®ÀÇ ¿äÃ»¿¡ ¿À·ù°¡ ÀÖ´Ù)
+#### 4XX : Client Error(í´ë¼ì´ì–¸íŠ¸ ì—ëŸ¬)(í´ë¼ì´ì–¸íŠ¸ì˜ ìš”ì²­ì— ì˜¤ë¥˜ê°€ ìžˆë‹¤)
 ```
-     : 400 : Bad Request (»ç¿ëÀÚÀÇ Àß¸øµÈ ¿äÃ»À» Ã³¸®ÇÒ ¼ö ¾øÀ½),(Àß¸øµÈ ¿äÃ»)
-     : 401 : Unauthorized (ÀÎÁõÀÌ ÇÊ¿äÇÑ ÆäÀÌÁö¸¦ ¿äÃ»ÇÑ °æ¿ì),(±ÇÇÑ ¾øÀ½)
-     : 402 : Payment required(¿¹¾àµÊ),(°áÁ¦ ÇÊ¿ä)
-     : 403 : Forbidden (Á¢±Ù ±ÝÁö, µðÅØÅÍ¸® ¸®½ºÆÃ ¿äÃ» ¹× °ü¸®ÀÚ ÆäÀÌÁö Á¢±Ù µîÀ» Â÷´Ü),(±ÝÁöµÊ)
-     : 404 : Not found, (¿äÃ»ÇÑ ÆäÀÌÁö ¾øÀ½),(Ã£À» ¼ö ¾øÀ½)
-     : 405 : Method not allowed (Çã¿ëµÇÁö ¾Ê´Â http method »ç¿ëÇÔ),(Çã¿ëµÇÁö ¾ÊÀº ¸Þ¼Òµå)
-     : 406 : Not Acceptable (¼ö¿ëÇÒ ¼ö ¾øÀ½)
-     : 407 : Proxy authentication required (ÇÁ¶ô½Ã ÀÎÁõ ¿ä±¸µÊ),(ÇÁ·Ï½Ã ÀÎÁõ ÇÊ¿ä)
-     : 408 : Request timeout (¿äÃ» ½Ã°£ ÃÊ°ú)
-     : 409 : Conflict (Ãæµ¹)
-     : 410 : Gone (¿µ±¸ÀûÀ¸·Î »ç¿ë ±ÝÁö),(»ç¶óÁü)
-     : 411 : Length Required (±æÀÌ ÇÊ¿ä)
-     : 412 : Precondition gailed (ÀüÃ¼ Á¶°Ç ½ÇÆÐ),(»çÀü Á¶°Ç ½ÇÆÐ)
-     : 413 : Request Entity Too Large (¿äÃ» °´Ã¼°¡ ³Ê¹« Å­)
-     : 414 : Request-URI too long (¿äÃ» URL ±æÀÌ°¡ ±ä °æ¿ìÀÓ)
-     : 415 : Unsupported Media Type (Áö¿øµÇÁö ¾Ê´Â ¹Ìµð¾î À¯Çü)
-     : 416 : Range Not Satisfiable (Ã³¸®ÇÒ ¼ö ¾ø´Â ¿äÃ» ¹üÀ§)
-     : 417 : Expectation Failed (¿¹»ó ½ÇÆÐ)
-     : 421 : Misdirected Request (Àß¸øµÈ ¿äÃ»)
-     : 422 : Unprocessable Entity (Ã³¸®ÇÒ ¼ö ¾ø´Â ¿£Æ¼Æ¼)
-     : 423 : Locked (Àá±è)
-     : 424 : Failed Dependency (ÀÇÁ¸ °ü°è·Î ½ÇÆÐ)
-     : 426 : Upgraded Required (¾÷±×·¹ÀÌµå ÇÊ¿äÇÔ)
-     : 428 : Precondition Required (»çÀü Á¶°Ç ÇÊ¿äÇÔ)
-     : 429 : Too Many Requests (³Ê¹« ¸¹Àº ¿äÃ»)
-     : 431 : Reauest Header Fields Too Large (³Ê¹« Å« Çì´õ)
-     : 444 : Connection Closed Without Response (ÀÀ´ä ¾øÀÌ ¿¬°á ´ÝÀ½)
-     : 451 : Unavailable For Legal Reasons (¹ýÀû »çÀ¯·Î ºÒ°¡)
+     : 400 : Bad Request (ì‚¬ìš©ìžì˜ ìž˜ëª»ëœ ìš”ì²­ì„ ì²˜ë¦¬í•  ìˆ˜ ì—†ìŒ),(ìž˜ëª»ëœ ìš”ì²­)
+     : 401 : Unauthorized (ì¸ì¦ì´ í•„ìš”í•œ íŽ˜ì´ì§€ë¥¼ ìš”ì²­í•œ ê²½ìš°),(ê¶Œí•œ ì—†ìŒ)
+     : 402 : Payment required(ì˜ˆì•½ë¨),(ê²°ì œ í•„ìš”)
+     : 403 : Forbidden (ì ‘ê·¼ ê¸ˆì§€, ë””í…í„°ë¦¬ ë¦¬ìŠ¤íŒ… ìš”ì²­ ë° ê´€ë¦¬ìž íŽ˜ì´ì§€ ì ‘ê·¼ ë“±ì„ ì°¨ë‹¨),(ê¸ˆì§€ë¨)
+     : 404 : Not found, (ìš”ì²­í•œ íŽ˜ì´ì§€ ì—†ìŒ),(ì°¾ì„ ìˆ˜ ì—†ìŒ)
+     : 405 : Method not allowed (í—ˆìš©ë˜ì§€ ì•ŠëŠ” http method ì‚¬ìš©í•¨),(í—ˆìš©ë˜ì§€ ì•Šì€ ë©”ì†Œë“œ)
+     : 406 : Not Acceptable (ìˆ˜ìš©í•  ìˆ˜ ì—†ìŒ)
+     : 407 : Proxy authentication required (í”„ë½ì‹œ ì¸ì¦ ìš”êµ¬ë¨),(í”„ë¡ì‹œ ì¸ì¦ í•„ìš”)
+     : 408 : Request timeout (ìš”ì²­ ì‹œê°„ ì´ˆê³¼)
+     : 409 : Conflict (ì¶©ëŒ)
+     : 410 : Gone (ì˜êµ¬ì ìœ¼ë¡œ ì‚¬ìš© ê¸ˆì§€),(ì‚¬ë¼ì§)
+     : 411 : Length Required (ê¸¸ì´ í•„ìš”)
+     : 412 : Precondition gailed (ì „ì²´ ì¡°ê±´ ì‹¤íŒ¨),(ì‚¬ì „ ì¡°ê±´ ì‹¤íŒ¨)
+     : 413 : Request Entity Too Large (ìš”ì²­ ê°ì²´ê°€ ë„ˆë¬´ í¼)
+     : 414 : Request-URI too long (ìš”ì²­ URL ê¸¸ì´ê°€ ê¸´ ê²½ìš°ìž„)
+     : 415 : Unsupported Media Type (ì§€ì›ë˜ì§€ ì•ŠëŠ” ë¯¸ë””ì–´ ìœ í˜•)
+     : 416 : Range Not Satisfiable (ì²˜ë¦¬í•  ìˆ˜ ì—†ëŠ” ìš”ì²­ ë²”ìœ„)
+     : 417 : Expectation Failed (ì˜ˆìƒ ì‹¤íŒ¨)
+     : 421 : Misdirected Request (ìž˜ëª»ëœ ìš”ì²­)
+     : 422 : Unprocessable Entity (ì²˜ë¦¬í•  ìˆ˜ ì—†ëŠ” ì—”í‹°í‹°)
+     : 423 : Locked (ìž ê¹€)
+     : 424 : Failed Dependency (ì˜ì¡´ ê´€ê³„ë¡œ ì‹¤íŒ¨)
+     : 426 : Upgraded Required (ì—…ê·¸ë ˆì´ë“œ í•„ìš”í•¨)
+     : 428 : Precondition Required (ì‚¬ì „ ì¡°ê±´ í•„ìš”í•¨)
+     : 429 : Too Many Requests (ë„ˆë¬´ ë§Žì€ ìš”ì²­)
+     : 431 : Reauest Header Fields Too Large (ë„ˆë¬´ í° í—¤ë”)
+     : 444 : Connection Closed Without Response (ì‘ë‹µ ì—†ì´ ì—°ê²° ë‹«ìŒ)
+     : 451 : Unavailable For Legal Reasons (ë²•ì  ì‚¬ìœ ë¡œ ë¶ˆê°€)
    ```
-#### 5XX : Server Error(¼­¹ö ¿¡·¯)
+#### 5XX : Server Error(ì„œë²„ ì—ëŸ¬)
 ```
-     : 500 : internal server error (³»ºÎ ¼­¹ö ¿À·ù)
-     : 501 : Not implemented (À¥ ¼­¹ö°¡ Ã³¸®ÇÒ ¼ö ¾øÀ½),(±¸ÇöµÇÁö ¾ÊÀ½)
-     : 502 : Bad Gateway (ºÒ·® °ÔÀÌÆ®¿þÀÌ)
-     : 503 : Service unnailable (¼­ºñ½º Á¦°ø ºÒ°¡)(¿äÃ» Ã³¸® ÁØºñX)
-     : 504 : Gateway timeout (°ÔÀÌÆ®¿þÀÌ ½Ã°£ ÃÊ°ú)
-     : 505 : HTTP wersion not supported (ÇØ´ç http ¹öÀü Áö¿øµÇÁö ¾ÊÀ½)
-     : 506 : Variant Also Negotiates (º¯Çü)
-     : 507 : Insufficient Storage (¿ë·® ºÎÁ·)
-     : 508 : Loop Detected (·çÇÁ °¨ÁöµÊ)
-     : 511 : Nedtwork Authentication Required (³×Æ®¿öÅ© ÀÎÁõ ÇÊ¿ä)
+     : 500 : internal server error (ë‚´ë¶€ ì„œë²„ ì˜¤ë¥˜)
+     : 501 : Not implemented (ì›¹ ì„œë²„ê°€ ì²˜ë¦¬í•  ìˆ˜ ì—†ìŒ),(êµ¬í˜„ë˜ì§€ ì•ŠìŒ)
+     : 502 : Bad Gateway (ë¶ˆëŸ‰ ê²Œì´íŠ¸ì›¨ì´)
+     : 503 : Service unnailable (ì„œë¹„ìŠ¤ ì œê³µ ë¶ˆê°€)(ìš”ì²­ ì²˜ë¦¬ ì¤€ë¹„X)
+     : 504 : Gateway timeout (ê²Œì´íŠ¸ì›¨ì´ ì‹œê°„ ì´ˆê³¼)
+     : 505 : HTTP wersion not supported (í•´ë‹¹ http ë²„ì „ ì§€ì›ë˜ì§€ ì•ŠìŒ)
+     : 506 : Variant Also Negotiates (ë³€í˜•)
+     : 507 : Insufficient Storage (ìš©ëŸ‰ ë¶€ì¡±)
+     : 508 : Loop Detected (ë£¨í”„ ê°ì§€ë¨)
+     : 511 : Nedtwork Authentication Required (ë„¤íŠ¸ì›Œí¬ ì¸ì¦ í•„ìš”)
    ```
