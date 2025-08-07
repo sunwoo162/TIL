@@ -1,0 +1,164 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color:#4493F8;
+}
+a:visited{
+    color:#4493F8;
+}
+.container{
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #0D1117;
+}
+.img{
+    top:500px;
+    width: 100px;
+    margin: 0 auto;
+}
+.Sign{
+    position: relative;
+    top:-14px;
+    color: #F2F6FB;
+    width: 200px;
+    margin: 0 auto;
+}
+.a{ 
+      position: relative;
+  top: -8px;
+    font-size:14px;
+    font-weight: lighter;
+    color: #F2F6FB;
+    width: 400px;
+    margin: 0 auto;
+}
+.b{
+    width: 400px;
+    margin: 0 auto;
+}
+.b input[type="text"] {
+    color:#F2F6FB;
+  outline: 1px solid #3F444C;
+  width: 370px;
+  height: 30px;
+  border-radius: 4px;  
+  box-shadow: none;        
+  border: none;
+  background-color: #0D1117;
+  text-indent: 7px;
+}
+.c{
+     position: relative;
+  top: -8px;
+    font-size:14px;
+    color: #F2F6FB;
+    width: 400px;
+    margin: 0 auto;
+}
+.d{
+    width: 400px;
+    margin: 0 auto;
+}
+.d input[type="password"] {
+    color : #F2F6FB;
+ outline: 1px solid #3F444C;
+  width: 370px;
+  height: 30px;
+  border-radius: 4px;  
+  box-shadow: none;        
+  border: none;
+  background-color: #0D1117;
+  text-indent: 7px;
+}
+.e{
+    font-weight: lighter;
+    color:#F2F6FB;
+    width: 400px;
+    margin: 0 auto;
+}
+.e button{
+      background-color:#238636;
+        border: #238636;
+  outline: 2px solid #238636; 
+}
+.f{
+    font-weight: lighter;
+    color:#F2F6FB;
+    width: 400px;
+    margin: 0 auto;
+}
+.f .aa, .aaa {
+    display: inline;
+}
+.f .aa{
+    color:#3F444C
+}
+.f .aaa{
+    color:#3F444C
+}
+.g{
+    width: 400px;
+    margin: 0 auto;
+}
+.g a{
+    color:#F2F6FB;
+}
+button {
+    
+  box-shadow: none;        
+  border: none;                    
+  color: white;            
+  padding: 10px 20px;
+  border-radius: 4px;      
+  font-size: 14px;
+  cursor: pointer;
+}
+.g button {
+    
+background-color: #24282F;
+  border: #24282F;
+  outline: 2px solid #3F444C; 
+  
+}
+.g button span {
+font-weight: bold;
+  position: relative;
+  top: -10px;
+  font-size:13px;
+}
+.g img{
+    position: relative;
+  top: -3px;
+}
+.h{
+    font-size:14px;
+    color:#F2F6FB;
+    width: 240px;
+    margin: 0 auto;
+}
+.i{
+    font-size: 12px;
+    color:#F2F6FB;
+    width: 150px;
+    margin: 0 auto;
+}
+.j{
+   
+    width: 850px;
+    margin: 0 auto;
+}
+.j a{
+    font-size:12px;
+    color: #9198A1;
+    width: 850px;
+    margin: 0 auto;
+}
+.k{
+    background-color:#171B22
+}
