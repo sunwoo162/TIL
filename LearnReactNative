@@ -1,4 +1,4 @@
-      index.tsx
+	### index.tsx
        - IntroScreen 컴포넌트를 불러와 화면에 출력함
       play.tsx
        - PlayScreen 컴포넌트를 불러와 화면에 출력함
