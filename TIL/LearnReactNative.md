@@ -1,26 +1,26 @@
 # 개발일지
-### index.tsx
+##### index.tsx
   - IntroScreen 컴포넌트를 불러와 화면에 출력함
-### play.tsx
+##### play.tsx
   - PlayScreen 컴포넌트를 불러와 화면에 출력함
-### _layout.tsx
-			 - 컴포넌트를 불러와 이름을 설정하고 headerShown false로 안보이게 함
-			indext.tsx
-			 - GameScreen 컴포넌트를 불러와 화면에 출력함
-		  _layout.tsx
-		   - <Tabs>에서 BottomTabBar를 만들고 기본 상태를 false로 해서 숨겨둠(true일때 보임)
-		   - <Tabs.Screen> 에서 이름을 index로 설정 아이콘 색깔 color 크기 28 이름 house.fill 색깔 color
-		   - <Tabs.Screen> 에서 이름을 game로 설정 아이콘 색깔 color 킉 28 이름 gamecontroller.fil 색깔 color
-		   - <Tabs.Screen> 에서 이름을 chat으로 설정 아이콘 색깔 color 크기 26 이름 text.bubble.fill 색깔 color
-		   - <Tabs.Screen> 에서 이름을 profile로 설정 아이콘 색깔 color 크기 28 이름 person.fill 색깔 color
-	  	  chat.tsx
-	  	   - ChatScrenn 컴포넌트를 불러와 화면에 출력함
-		  index.tsx
+##### _layout.tsx
+  - 컴포넌트를 불러와 이름을 설정하고 headerShown false로 안보이게 함
+##### indext.tsx
+  - GameScreen 컴포넌트를 불러와 화면에 출력함
+##### _layout.tsx
+  - <Tabs>에서 BottomTabBar를 만들고 기본 상태를 false로 해서 숨겨둠(true일때 보임)
+  - <Tabs.Screen> 에서 이름을 index로 설정 아이콘 색깔 color 크기 28 이름 house.fill 색깔 color
+  - <Tabs.Screen> 에서 이름을 game로 설정 아이콘 색깔 color 킉 28 이름 gamecontroller.fil 색깔 color
+  - <Tabs.Screen> 에서 이름을 chat으로 설정 아이콘 색깔 color 크기 26 이름 text.bubble.fill 색깔 color
+  - <Tabs.Screen> 에서 이름을 profile로 설정 아이콘 색깔 color 크기 28 이름 person.fill 색깔 color
+##### chat.tsx
+  - ChatScrenn 컴포넌트를 불러와 화면에 출력함
+##### index.tsx
 		   - HomeScreen 컴포넌트를 불러와 화면에 출력함
-		  profile.tsx
+##### profile.tsx
 		   - ProfileScreen 컴포넌트를 불러와 화면에 출력함
-		onboarding
-			success.tsx 
+### onboarding
+##### success.tsx 
 			 - Image, Platform, Pressale, StylesSheet, Text, View 가져옴
 			 - const child 에서 몫데이터 넣어둠
 			 - <View style={s.wrap}> 에서 각각 상황에 맞게 나올 값 넣어둠 기본 false로 적용 x
@@ -37,7 +37,7 @@
 			 - accessibilityRole="button" 스크린 리더에게 버튼이란걸 알려줌
 			 - accessibilityLabel="시작하기" 스크린 리더가 읽을 텍스트
 			 - <Text> 스타일을 s.leftArrow로 설정해둠 allowFontScaling을 false로 해서 휴대폰에서 폰트 사이즈를 맞춤형으로 조정하는걸 막음
-			user-info.tsx
+##### user-info.tsx
 			 - import {} 부분에서 필요한 컴포넌트와 API를 가져옴
 				- Platform : 현재 앱이 iOS인지 Android인지 확인할 때 사용
 				- Pressable : 터치 가능한 버튼 컴포넌트
@@ -45,7 +45,7 @@
 				- Text : 글자를 표시하는 컴포넌트
 				- TextInput : 사용자가 텍스트를 입력하는 입력창
 				- View : 기본 레이아웃 컨테이너
-			 |||\\- const { name, age, phone, set } = useOnboardingStore(); 전역 상태에서 데이터를 가져옴
+			 	- const { name, age, phone, set } = useOnboardingStore(); 전역 상태에서 데이터를 가져옴
 			 - const canNext = Boolean(name.trim() && age.trim() && phone.trim()); name, age, phone이 모두 입력되었는지 확인함
 			 - const ageRef = useRef<TextInput>(null);
 			   const phoneRef = useRef<TextInput>(null); 입력창으로 자동이동 하기 위해 사용함
@@ -55,7 +55,7 @@
 			 - keyboardType="phone-pad" 전화번호 입력 창 전화번호 입력 키보드임
 			 - <Pressable> 다음 버튼 버튼 클릭하면 /onboarding/verify-code로 이동
 			 - style 버튼 스타일
-			verify-code
+##### verify-code
 			 - const myCode = "927582"; 내 인증번호를 몫데이터로 저장해둠
 			 - const [childCode, setChildCode] = useState(""); useState를 사용하여 인증번호를 받음
 			 - const canNext = /^\d{6}$/.test(childCode); 입력값이 6자리 숫자인지 검사함
@@ -67,7 +67,7 @@
 			 - onPress={() => router.push("/onboarding/success")} 버튼 클릭시 /onboarding/success로 이동
 			 - disabled={!canNext} 거짓일때 버튼 비활성화
 			 - style 기본 상태 -> 파란 버튼, 입력 없음 -> 흐린 버튼, 누르는 중 -> 약간 투명
-			_layout.tsx
+##### _layout.tsx
 			 - import { useFonts } from "expo-font"; expo에서 커스텀 폰트를 불ㄹ러오는 훅
 			 - import { Stack } from "expo-router"; import { Stack } from "expo-router"; Stack Navigation
 			 - import { StatusBar } from "expo-status-bar"; 핸드폰 상단의 상태바 색상 및 스타일을 관리함
@@ -76,13 +76,13 @@
 			 - <ThemeProvider value={LightTheme}> 모든 화면에 LightTheme 적용
 			 - <Stack screenOptions={{ headerShown: false }} /> Stack 네비게이션 생성 및 상태를 false로 해서 숨기기
 			 - <StatusBar /> 폰 상단 상태바 스타일을 관리함
-			index.tsx
+##### index.tsx
 			 - const { isSignedIn, hasOnboarded } = useAuthStore(); 전역 인증 상태
 			 - if (!isSignedIn) return <Redirect href="/login" />; 로그인이 안 된 경우 /login 창으로 이동 
 			 - if (!hasOnboarded) return <Redirect href="/onboarding/user-info" />; 로그인을 했지만 온보딩을 안 한 경우 user-info 화면으로 이동
 			 - return <Redirect href="/(tabs)" />; 로그인과 온보딩이 전부 되있으면 하단 탭 네비게이션으로 이동
 			 - <Redirect href="/login" /> 자동 화면 이동
-			login.tsx
+##### login.tsx
 			 - import { useAuthStore } from "@/entities/auth/model/authStore"; 로그인 상태를 저장하는 전역 상태
 			 - import { LoginButton } from "@/features/login-with-kakao/ui/LoginButton"; 카카오 로그인 버튼 컴포넌트 -> 누르면 카카오 로그인 기능으로 이동함
 			 - import { router } from "expo-router"; 화면 이동 기능
@@ -95,8 +95,8 @@
 			 - <View style={[s.actions, { paddingBottom: bottom + 40 }]}> 로그인 버튼 영역 bottom + 40으로 여백
 			 - <LoginButton onPress={handleLogin} accessibilityLabel="카카오 계정으로 간편 로그인" /> 버튼을 누르면 handleLogin 실행 
 			 - <Text>*카카오 계정으로만 로그인이 가능합니다</Text> 안내문구 출력
-		enntites
-			anth\model
+### enntites
+##### anth\model
 			 - import { create } from "zustand"; 전역 상태 관리 라이브러리
 			 - type AuthState ={} 상태 타입 정의, store의 구조를 정의한 타입
 			 - isSignedIn 로그인 여부
@@ -113,7 +113,7 @@
 			   setOnboarded(true) 이렇게 사용
 			 - reset: () => set({ isSignedIn: false, hasOnboarded: false }), 상태 초기화
 			   reset() 이렇게 사용
-			onboarding
+##### onboarding
 			 - import { create } from "zustand";
 			 - type Onboarding = {} store의 구조를 정의한 TypeScript 타입
 			 - name 사용자 이름
@@ -130,5 +130,5 @@
 			 - reset: () => set({ name: "", age: "", phone: "" }), 데이터 초기화 
 			 - 실제 예시 const { name, age, phone, set } = useOnboardingStore(); 사용자 입력
 			 -> onChangeText={(v) => set({ name: v })} store 업데이트
-			 - store로 저장하면 각 화면에서 같은 데이터 접근 가능
+- store로 저장하면 각 화면에서 같은 데이터 접근 가능
 // lib cre 부터 이어서
