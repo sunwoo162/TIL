@@ -1,0 +1,134 @@
+# 개발일지
+### index.tsx
+  - IntroScreen 컴포넌트를 불러와 화면에 출력함
+### play.tsx
+  - PlayScreen 컴포넌트를 불러와 화면에 출력함
+### _layout.tsx
+			 - 컴포넌트를 불러와 이름을 설정하고 headerShown false로 안보이게 함
+			indext.tsx
+			 - GameScreen 컴포넌트를 불러와 화면에 출력함
+		  _layout.tsx
+		   - <Tabs>에서 BottomTabBar를 만들고 기본 상태를 false로 해서 숨겨둠(true일때 보임)
+		   - <Tabs.Screen> 에서 이름을 index로 설정 아이콘 색깔 color 크기 28 이름 house.fill 색깔 color
+		   - <Tabs.Screen> 에서 이름을 game로 설정 아이콘 색깔 color 킉 28 이름 gamecontroller.fil 색깔 color
+		   - <Tabs.Screen> 에서 이름을 chat으로 설정 아이콘 색깔 color 크기 26 이름 text.bubble.fill 색깔 color
+		   - <Tabs.Screen> 에서 이름을 profile로 설정 아이콘 색깔 color 크기 28 이름 person.fill 색깔 color
+	  	  chat.tsx
+	  	   - ChatScrenn 컴포넌트를 불러와 화면에 출력함
+		  index.tsx
+		   - HomeScreen 컴포넌트를 불러와 화면에 출력함
+		  profile.tsx
+		   - ProfileScreen 컴포넌트를 불러와 화면에 출력함
+		onboarding
+			success.tsx 
+			 - Image, Platform, Pressale, StylesSheet, Text, View 가져옴
+			 - const child 에서 몫데이터 넣어둠
+			 - <View style={s.wrap}> 에서 각각 상황에 맞게 나올 값 넣어둠 기본 false로 적용 x
+			 - <View style={} 에서 각각 스타일 지정해둠
+			 - <View style={[s.actions, { marginBottom: bottom + 12 }]}> 스타일 두개 합쳐둠 bottom에 12 더함
+			 - <Pressable>에서 사용자가 누르면 이전 화면으로 이동하는 기능을 설정해둠 
+			 - hitSlop 으로 버튼 크기 설정
+			 - style={({ pressed }) => [s.outlineBtn, pressed && { opacity: 0.9 }]}에서 사용자가 누르고 있는지 안누르고 있는지 구별 누르면 약간 투명해짐, 
+			 - accessibilityRole 이게 버튼이란걸 접근성 시스템에 알려줌
+			 - <Text> 스타일을 s.leftArrow로 설정해둠 allowFontScaling을 false로 해서 휴대폰에서 폰트 사이즈를 맞춤형으로 조정하는걸 막음
+			 - <Pressable> 클릭시 이벤트 발생 
+			 - setOnboarded를 버튼을 클릭했을 때 true로 설정해둠
+			 - tyle={({ pressed }) => [s.primaryBtn, pressed && { opacity: 0.9 }]}에서 스타일 설정 
+			 - accessibilityRole="button" 스크린 리더에게 버튼이란걸 알려줌
+			 - accessibilityLabel="시작하기" 스크린 리더가 읽을 텍스트
+			 - <Text> 스타일을 s.leftArrow로 설정해둠 allowFontScaling을 false로 해서 휴대폰에서 폰트 사이즈를 맞춤형으로 조정하는걸 막음
+			user-info.tsx
+			 - import {} 부분에서 필요한 컴포넌트와 API를 가져옴
+				- Platform : 현재 앱이 iOS인지 Android인지 확인할 때 사용
+				- Pressable : 터치 가능한 버튼 컴포넌트
+				- StylesSheet : 스타일을 정의하는 객체를 만드는 도구
+				- Text : 글자를 표시하는 컴포넌트
+				- TextInput : 사용자가 텍스트를 입력하는 입력창
+				- View : 기본 레이아웃 컨테이너
+			 |||\\- const { name, age, phone, set } = useOnboardingStore(); 전역 상태에서 데이터를 가져옴
+			 - const canNext = Boolean(name.trim() && age.trim() && phone.trim()); name, age, phone이 모두 입력되었는지 확인함
+			 - const ageRef = useRef<TextInput>(null);
+			   const phoneRef = useRef<TextInput>(null); 입력창으로 자동이동 하기 위해 사용함
+			 - <TextInput> 이름 입력창 이름을 입력하고 Enter을 누르면 나이 입력창으로 이동
+			 - keyboardType="number-pad" 숫자 키보드만 표시 
+			 - onSubmitEditing={() => phoneRef.current?.focus()} 전화번호 입력창으로 이동
+			 - keyboardType="phone-pad" 전화번호 입력 창 전화번호 입력 키보드임
+			 - <Pressable> 다음 버튼 버튼 클릭하면 /onboarding/verify-code로 이동
+			 - style 버튼 스타일
+			verify-code
+			 - const myCode = "927582"; 내 인증번호를 몫데이터로 저장해둠
+			 - const [childCode, setChildCode] = useState(""); useState를 사용하여 인증번호를 받음
+			 - const canNext = /^\d{6}$/.test(childCode); 입력값이 6자리 숫자인지 검사함
+			 - <Text> 화면에 띄우기
+			 - <View style={s.myCodeCard}> 인증 번호 카드 아래 s.myCodeCard 스타일 확인하면 회색 가운데 정렬 카드임
+			 - onChangeText={(v) => setChildCode(v.replace(/[^0-9]/g, ""))} 자녀 인증번호 입력 부분 v.replace(/[^0-9]/g, "") 이 코드로 숫자가 아닌 문자는 제거함 -> 숫자만 입력 가능
+			 - keyboardType="number-pad" 숫자 키패드 표시
+			 - maxLength={6} 최대 6자리로 설정
+			 - onPress={() => router.push("/onboarding/success")} 버튼 클릭시 /onboarding/success로 이동
+			 - disabled={!canNext} 거짓일때 버튼 비활성화
+			 - style 기본 상태 -> 파란 버튼, 입력 없음 -> 흐린 버튼, 누르는 중 -> 약간 투명
+			_layout.tsx
+			 - import { useFonts } from "expo-font"; expo에서 커스텀 폰트를 불ㄹ러오는 훅
+			 - import { Stack } from "expo-router"; import { Stack } from "expo-router"; Stack Navigation
+			 - import { StatusBar } from "expo-status-bar"; 핸드폰 상단의 상태바 색상 및 스타일을 관리함
+			 - const [fontsLoaded] = useFonts({SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),}); 폰트
+			 - if (!fontsLoaded) {return <View style={{ flex: 1, backgroundColor: "#fff" }} />;} 폰트가 아직 로드 되지않으면 빈 화면을 보여줌 폰트 깜빡임 방지
+			 - <ThemeProvider value={LightTheme}> 모든 화면에 LightTheme 적용
+			 - <Stack screenOptions={{ headerShown: false }} /> Stack 네비게이션 생성 및 상태를 false로 해서 숨기기
+			 - <StatusBar /> 폰 상단 상태바 스타일을 관리함
+			index.tsx
+			 - const { isSignedIn, hasOnboarded } = useAuthStore(); 전역 인증 상태
+			 - if (!isSignedIn) return <Redirect href="/login" />; 로그인이 안 된 경우 /login 창으로 이동 
+			 - if (!hasOnboarded) return <Redirect href="/onboarding/user-info" />; 로그인을 했지만 온보딩을 안 한 경우 user-info 화면으로 이동
+			 - return <Redirect href="/(tabs)" />; 로그인과 온보딩이 전부 되있으면 하단 탭 네비게이션으로 이동
+			 - <Redirect href="/login" /> 자동 화면 이동
+			login.tsx
+			 - import { useAuthStore } from "@/entities/auth/model/authStore"; 로그인 상태를 저장하는 전역 상태
+			 - import { LoginButton } from "@/features/login-with-kakao/ui/LoginButton"; 카카오 로그인 버튼 컴포넌트 -> 누르면 카카오 로그인 기능으로 이동함
+			 - import { router } from "expo-router"; 화면 이동 기능
+			 - import { useSafeAreaInsets } from "react-native-safe-area-context"; 하단 바 영역 계산
+			 - export default function Login() { 로그인 컴포넌트
+			 - const { bottom } = useSafeAreaInsets(); 화면 아래 안전 영역 높이
+			 - const setSignedIn = useAuthStore((s) => s.setSignedIn); 로그인 상태 저장 함수
+			 - setSignedIn(true) 로그인 완료
+			 - router.replace("/onboarding/user-info") 화면 이동 로그인 버튼을 눌렀을때 로그인 완료가 되면 이동하는 거임
+			 - <View style={[s.actions, { paddingBottom: bottom + 40 }]}> 로그인 버튼 영역 bottom + 40으로 여백
+			 - <LoginButton onPress={handleLogin} accessibilityLabel="카카오 계정으로 간편 로그인" /> 버튼을 누르면 handleLogin 실행 
+			 - <Text>*카카오 계정으로만 로그인이 가능합니다</Text> 안내문구 출력
+		enntites
+			anth\model
+			 - import { create } from "zustand"; 전역 상태 관리 라이브러리
+			 - type AuthState ={} 상태 타입 정의, store의 구조를 정의한 타입
+			 - isSignedIn 로그인 여부
+			 - hasOnboarded 온보딩 완료 여부
+			 - setSignedIn 로그인 상태 변경
+			 - setOnboarded 온보딩 상태 변경
+			 - reset 상태 초기화
+			 - export const useAuthStore = create<AuthState>((set) => ({ 전역 상태 저장소 생성
+			   const { isSignedIn } = useAuthStore(); 앱 어디서든 이렇게 사용 가능
+			 - isSignedIn: false,hasOnboarded: false, 초기 상태를 false로 해서 앱 처음 실행시 로그인 및 온보딩 X
+			 - setSignedIn: (v) => set({ isSignedIn: v }), 로그인 상태 변화를 저장함
+			   setSignedIn(true) 이렇게 사용
+			 - setOnboarded: (v) => set({ hasOnboarded: v }), 온보딩 상태 변경을 저장함
+			   setOnboarded(true) 이렇게 사용
+			 - reset: () => set({ isSignedIn: false, hasOnboarded: false }), 상태 초기화
+			   reset() 이렇게 사용
+			onboarding
+			 - import { create } from "zustand";
+			 - type Onboarding = {} store의 구조를 정의한 TypeScript 타입
+			 - name 사용자 이름
+			 - age 사용자의 나이
+			 - phone 전화번호
+			 - set 데이터 업데이트
+			 - reset 데이터 초기화
+			 - set: (p: Partial<Onboarding>) => void; Partial<T> = T 타입의 일부만 전달 가능(필요한 값만 업데이트 가능
+			 - set({ age : "18"}) 이런식
+			 - export const useOnboardingStore = create<Onboarding>((set) => ({ 전역 상태 저장소를 생성
+			 - const { name, age } = useOnboardingStore(); 이런식으로 사용
+			 - name : "" 이렇게 초기값 넣어둠
+			 - set: (p) => set(p), 데이터 변경 함수 데이터 변경 할 때 쓰임
+			 - reset: () => set({ name: "", age: "", phone: "" }), 데이터 초기화 
+			 - 실제 예시 const { name, age, phone, set } = useOnboardingStore(); 사용자 입력
+			 -> onChangeText={(v) => set({ name: v })} store 업데이트
+			 - store로 저장하면 각 화면에서 같은 데이터 접근 가능
+// lib cre 부터 이어서
